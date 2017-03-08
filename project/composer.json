@@ -1,0 +1,11 @@
+{
+    "name": "manix/brat-instance",
+    "autoload": {
+        "psr-4": {
+            "Project\\": "./"
+        }
+    },
+    "require": {
+        "manix/brat": "*"
+    }
+}
