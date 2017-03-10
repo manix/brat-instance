@@ -2,17 +2,9 @@
 
 namespace Project\Views\Layouts;
 
-use Manix\Brat\Components\Views\HTML\View;
-use Manix\Brat\Helpers\HTMLGenerator;
+use Manix\Brat\Components\Views\HTML\HTMLDocument;
 
-class LayoutView extends View {
-
-    protected $page;
-
-    public function __construct($data, HTMLGenerator $html, View $page) {
-        parent::__construct($data, $html);
-        $this->page = $page;
-    }
+abstract class LayoutView extends HTMLDocument {
 
     public function html() {
         ?>
@@ -26,10 +18,10 @@ class LayoutView extends View {
 
                 <!-- Bootstrap CSS -->
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-                <?= $this->page->getHead() ?>
+                <?= $this->head() ?>
             </head>
             <body>
-                <?= $this->page ?>
+                <?= $this->body() ?>
 
                 <!-- jQuery first, then Tether, then Bootstrap JS. -->
                 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
