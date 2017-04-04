@@ -9,5 +9,5 @@ return [
     'unsuppFormat' => 'You have requested a response in a format that we do not support.',
     'cantSaveAI' => 'Could not persist AI value for table {$0}.',
     'indexh' => 'It worked!',
-    'indexp' => 'Looks like everything is smooth.'
+    'indexp' => 'Looks like everything went smooth.'
 ];

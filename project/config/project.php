@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'namespace' => 'Project\\'
+    'name' => 'My project',
 ];
