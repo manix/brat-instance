@@ -7,6 +7,6 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "manix/brat": "*",
+        "manix/brat": "*"
     }
 }
