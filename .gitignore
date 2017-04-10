@@ -4,4 +4,6 @@
 
 /project/.env.php
 
+/project/files
+
 /composer.lock

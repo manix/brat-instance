@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'name' => 'My project',
+    'name' => 'Brat Project',
 ];

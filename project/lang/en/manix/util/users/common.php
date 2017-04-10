@@ -13,5 +13,21 @@ return [
     'userNotFound' => 'I can not find you.',
     'emailTaken' => 'This address is registered',
     'forgotSuccess' => 'Your request was successful',
-    'forgotSuccessExt' => 'We have sent a message to your mailbox where you will find a link that will allow you to reset your password.'
+    'forgotSuccessExt' => 'We have sent a message to your mailbox where you will find a link that will allow you to reset your password.',
+    'registerSuccess' => 'You have registered successfully! Please go to your mailbox to verify that was your address.',
+    'emailNotVerified' => 'This address has not been verified.',
+    'verifiedSuccess' => 'You have verified your address successfully!',
+    'verifiedFail' => 'There was an error verifying your address.',
+    'verifyAddr' => 'Verify address',
+    'clickToResetPass' => 'You are about to reset your account\'s password. Click the button below to confirm you want to proceed.',
+    'resetPass' => 'Reset password',
+    'resetSuccess' => 'You have successfully reset your password. Your new password is displayed below, you can use it to log in and manage your account.',
+    'resetFail' => 'An error occurred resetting your password.',
+    'logout' => 'Log out',
+    'settings' => 'Settings',
+    'emails' => 'Emails',
+    'email' => 'Email',
+    'password' => 'Password',
+    'name' => 'Name',
+    
 ];
