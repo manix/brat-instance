@@ -1,11 +1,6 @@
-/nbproject
-
-/vendor
-
-/project/.env.php
-
-/project/files
-
-/project/config/plugins.php
-
-/composer.lock
+nbproject
+vendor
+project/.env.php
+project/files
+project/config/plugins.php
+composer.lock
