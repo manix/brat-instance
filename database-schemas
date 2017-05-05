@@ -1,23 +1,22 @@
-CREATE TABLE `manix_users` (
+CREATE TABLE IF NOT EXISTS `manix_users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `password` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-CREATE TABLE `manix_users_admins` (
+CREATE TABLE IF NOT EXISTS `manix_users_admins` (
   `user_id` int(10) unsigned NOT NULL,
-  `privileges` text CHARACTER SET utf8mb4,
+  `privileges` text CHARACTER SET utf8,
   PRIMARY KEY (`user_id`),
   CONSTRAINT `mua_ufk` FOREIGN KEY (`user_id`) REFERENCES `manix_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `manix_users_emails` (
+CREATE TABLE IF NOT EXISTS `manix_users_emails` (
   `user_id` int(10) unsigned DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
-  `verified` tinytext CHARACTER SET utf8mb4,
+  `email` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `verified` tinytext CHARACTER SET utf8,
   PRIMARY KEY (`email`),
   KEY `uid` (`user_id`),
   CONSTRAINT `mue_ufk` FOREIGN KEY (`user_id`) REFERENCES `manix_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
