@@ -1,12 +1,20 @@
 {
-    "name": "manix/brat-instance",
-    "autoload": {
-        "psr-4": {
-            "Project\\": "project"
-        }
-    },
-    "minimum-stability": "dev",
-    "require": {
-        "manix/brat": "*"
+  "name": "manix/brat-instance",
+  "autoload": {
+    "psr-4": {
+      "Project\\": "project"
     }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "manix/brat": "dev-master"
+  },
+  "scripts": {
+    "post-package-install": [
+      "Manix\\Brat\\Components\\Plugins\\PluginManager::install"
+    ],
+    "pre-package-uninstall": [
+      "Manix\\Brat\\Components\\Plugins\\PluginManager::uninstall"
+    ]
+  }
 }
