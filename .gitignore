@@ -6,4 +6,6 @@
 
 /project/files
 
+/project/config/plugins.php
+
 /composer.lock
