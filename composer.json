@@ -7,17 +7,7 @@
   },
   "minimum-stability": "dev",
   "require": {
-    "manix/brat": "dev-master"
-  },
-  "scripts": {
-    "post-create-project-cmd": [
-      "php -r \"copy('project/.env.example.php', 'project/.env.php');\""
-    ],
-    "post-package-install": [
-      "Manix\\Brat\\Components\\Plugins\\PluginManager::install"
-    ],
-    "pre-package-uninstall": [
-      "Manix\\Brat\\Components\\Plugins\\PluginManager::uninstall"
-    ]
+    "manix/brat": "dev-master",
+    "manix/brat-admin": "dev-master"
   }
 }
