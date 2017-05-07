@@ -3,6 +3,7 @@
 return [
     'env' => 'debug',
     'db' => [
+        'driver' => 'mysql',
         'host' => '',
         'dbname' => '',
         'user' => '',
