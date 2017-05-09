@@ -5,9 +5,7 @@
       "Project\\": "project"
     }
   },
-  "minimum-stability": "dev",
   "require": {
-    "manix/brat": "dev-master",
-    "manix/brat-admin": "dev-master"
+    "manix/brat": "1.*",
   }
 }
