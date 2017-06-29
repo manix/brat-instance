@@ -15,5 +15,9 @@ return [
     'passNoMatch' => 'Passwords do not match.',
     'changesSaved' => 'Changes have been saved.',
     'emailAdded' => 'Address added successfully.',
-    'minimumVerifiedMails' => 'You must have at least one verified address linked to your account at any time.'
+    'minimumVerifiedMails' => 'You must have at least one verified address linked to your account at any time.',
+    'photo' => 'Photo',
+    'currentPhoto' => 'Current photo',
+    'uploadNewPhoto' => 'Upload new',
+    'photoTip' => 'For best results upload an image with 1:1 proportions.'
 ];

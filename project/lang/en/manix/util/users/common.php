@@ -29,5 +29,5 @@ return [
     'email' => 'Email',
     'password' => 'Password',
     'name' => 'Name',
-    
+    'rememberMe' => 'Remember me'
 ];
