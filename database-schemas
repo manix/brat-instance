@@ -3,6 +3,8 @@ CREATE TABLE IF NOT EXISTS `manix_users` (
   `password` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `photo_rev` int(10) unsigned NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `updated` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
@@ -20,6 +22,16 @@ CREATE TABLE IF NOT EXISTS `manix_users_emails` (
   PRIMARY KEY (`email`),
   KEY `uid` (`user_id`),
   CONSTRAINT `mue_ufk` FOREIGN KEY (`user_id`) REFERENCES `manix_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `manix_users_logins` (
+  `user_id` int(10) unsigned NOT NULL,
+  `created` datetime NOT NULL,
+  `ip` tinyblob,
+  `ua` varchar(255) DEFAULT NULL,
+  `detail` varchar(255) DEFAULT NULL,
+  `updated` datetime DEFAULT NULL,
+  PRIMARY KEY (`user_id`,`created`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `manix_users_tokens` (
