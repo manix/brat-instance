@@ -19,5 +19,6 @@ return [
     'photo' => 'Photo',
     'currentPhoto' => 'Current photo',
     'uploadNewPhoto' => 'Upload new',
-    'photoTip' => 'For best results upload an image with 1:1 proportions.'
+    'photoTip' => 'For best results upload an image with 1:1 proportions.',
+    'logins' => 'Logins'
 ];
