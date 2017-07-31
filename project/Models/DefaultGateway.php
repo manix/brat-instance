@@ -9,7 +9,7 @@ class DefaultGateway extends SQLGateway {
 
   protected static $connections = [];
 
-  public static connect($name) {
+  public static function connect($name) {
     if (!isset(static::$connections[$name])) {
       $host = $_ENV[$name]['host'] ?? null;
       $dbname = $_ENV[$name]['dbname'] ?? null;
