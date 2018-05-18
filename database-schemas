@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `manix_users_logins` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `manix_users_tokens` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `hash` varchar(255) DEFAULT NULL,
   `user_id` int(10) unsigned DEFAULT NULL,
   `ua` varchar(32) unsigned DEFAULT NULL,

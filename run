@@ -27,7 +27,7 @@ $manix->run(new class extends Program {
   }
 
   public function respond($data) {
-    echo $data;
+    print_r($data);
   }
 
   public function determineRoute(): string {
