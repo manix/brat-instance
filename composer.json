@@ -6,6 +6,6 @@
     }
   },
   "require": {
-    "manix/brat": "1.*"
+    "manix/brat": "1.0.0-alpha2"
   }
 }
