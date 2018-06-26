@@ -8,7 +8,8 @@ return [
         'dbname' => '',
         'user' => '',
         'pass' => '',
-        'charset' => 'utf8'
+        'charset' => 'utf8',
+        'port' => 3306
     ],
     'mail' => [
         'host' => '',

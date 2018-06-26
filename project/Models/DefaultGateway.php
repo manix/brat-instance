@@ -5,7 +5,7 @@ namespace Project\Models;
 use Manix\Brat\Components\Persistence\SQL\SQLGateway;
 use PDO;
 
-class DefaultGateway extends SQLGateway {
+abstract class DefaultGateway extends SQLGateway {
 
   protected static $connections = [];
 
@@ -16,8 +16,9 @@ class DefaultGateway extends SQLGateway {
       $charset = $_ENV[$name]['charset'] ?? null;
       $user = $_ENV[$name]['user'] ?? null;
       $pass = $_ENV[$name]['pass'] ?? null;
+      $port = $_ENV[$name]['port'] ?? 3306;
 
-      $pdo = new PDO("mysql:host={$host};dbname={$dbname};charset={$charset};", $user, $pass, [
+      $pdo = new PDO("mysql:host={$host};port={$port};dbname={$dbname};charset={$charset};", $user, $pass, [
           PDO::ATTR_EMULATE_PREPARES => false,
           PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
           PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC

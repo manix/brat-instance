@@ -2,13 +2,13 @@
 
 namespace Project\Controllers;
 
-use Manix\Brat\Components\Controller;
+use Manix\Brat\Utility\HTTP\HTTPController;
 use Project\Views\Pages\IndexView;
 
-class Index extends Controller {
+class Index extends HTTPController {
 
   public $page = IndexView::class;
-
+  
   public function get() {
     
     return [

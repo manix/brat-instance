@@ -1,6 +1,6 @@
 <?php
 
-use Manix\Brat\HTTPProgram;
+use Manix\Brat\Utility\HTTP\HTTPProgram;
 
 define('PUBLIC_PATH', __DIR__);
 define('PROJECT_PATH', realpath(__DIR__ . '/../project'));
