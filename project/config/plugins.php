@@ -1,3 +1,2 @@
-<?php
-
-return [];
+<?php return array (
+);

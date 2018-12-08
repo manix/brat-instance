@@ -11,18 +11,7 @@ abstract class DefaultGateway extends SQLGateway {
 
   public static function connect($name) {
     if (!isset(static::$connections[$name])) {
-      $host = $_ENV[$name]['host'] ?? null;
-      $dbname = $_ENV[$name]['dbname'] ?? null;
-      $charset = $_ENV[$name]['charset'] ?? null;
-      $user = $_ENV[$name]['user'] ?? null;
-      $pass = $_ENV[$name]['pass'] ?? null;
-      $port = $_ENV[$name]['port'] ?? 3306;
-
-      $pdo = new PDO("mysql:host={$host};port={$port};dbname={$dbname};charset={$charset};", $user, $pass, [
-          PDO::ATTR_EMULATE_PREPARES => false,
-          PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-          PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-      ]);
+      $pdo = new PDO(...($_ENV['data-sources'][$name]));
 
       static::$connections[$name] = $pdo;
     }
@@ -34,7 +23,7 @@ abstract class DefaultGateway extends SQLGateway {
     return $this->pdo;
   }
 
-  function __construct($connection = 'db') {
+  function __construct($connection = 0) {
     parent::__construct($connection instanceof PDO ? $connection : static::connect($connection));
   }
 

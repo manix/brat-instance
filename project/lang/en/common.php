@@ -10,5 +10,10 @@ return [
     'cantSaveAI' => 'Could not persist AI value for table {$0}.',
     'indexh' => 'It worked!',
     'indexp' => 'Looks like everything went smooth.',
-    'continueConfirm' => 'Are you sure you want to continue?'
+    'continueConfirm' => 'Are you sure you want to continue?',
+    'create' => 'Create',
+    'save' => 'Save',
+    'delete' => 'Delete',
+    'enterQuery' => 'Enter your query to filter records',
+    'noResults' => 'No records found.'
 ];

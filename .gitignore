@@ -3,4 +3,5 @@ vendor
 project/.env.php
 project/files
 project/config/plugins.php
+project/config/social.php
 composer.lock

@@ -2,14 +2,17 @@
 
 return [
     'env' => 'debug',
-    'db' => [
-        'driver' => 'mysql',
-        'host' => '',
-        'dbname' => '',
-        'user' => '',
-        'pass' => '',
-        'charset' => 'utf8',
-        'port' => 3306
+    'data-sources' => [
+      [
+        'mysql:host=localhost;port=3306;dbname=;charset=utf8mb4',
+        'root',
+        '',
+        [
+          PDO::ATTR_EMULATE_PREPARES => false,
+          PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+          PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        ]
+      ]
     ],
     'mail' => [
         'host' => '',

@@ -1,10 +1,5 @@
 <?php
 
-use Manix\Brat\Utility\HTTP\HTTPProgram;
+require('../bootstrap.php');
 
-define('PUBLIC_PATH', __DIR__);
-define('PROJECT_PATH', realpath(__DIR__ . '/../project'));
-
-require __DIR__ . '/../vendor/manix/brat/src/manix.php';
-
-$manix->run(new HTTPProgram);
+$manix->run(new Manix\Brat\Utility\HTTP\HTTPProgram, DEBUG_MODE);
