@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'bratpath' => null,
     'env' => 'debug',
     'data-sources' => [
       [
